@@ -33,7 +33,7 @@
   --danger-bright:#ff2a2a;
   --gold:#fbbf24;
   --r-sm:10px; --r-md:16px; --r-lg:24px; --r-xl:32px; --r-full:999px;
-  --r-card:24px; /* زاوية موحدة لكل البطاقات */
+  --r-card:24px;
   --ease:cubic-bezier(.2,.8,.2,1);
   --ease-out:cubic-bezier(.16,1,.3,1);
 }
@@ -93,27 +93,27 @@ h1,h2,h3,h4{color:var(--text-hi);line-height:1.15;font-weight:600;letter-spacing
 @media(max-width:768px){.roadmap-vline{left:3px}.roadmap-vline-dot{width:11px;height:11px}.roadmap-vline-dot::before{inset:-6px}}
 @media(max-width:480px){.roadmap-vline{left:2px}}
 
-/* ROADMAP CARDS — مكبوسة ومضبوطة */
+/* ROADMAP CARDS — مسافات مضبوطة ومتناسقة */
 .roadmap-custom{display:flex;flex-direction:column;gap:6rem;max-width:900px;margin:0 auto;padding-top:5rem;position:relative;z-index:10}
-.roadmap-item{position:relative;width:100%;background:var(--surface);border:1px solid var(--border-2);border-radius:var(--r-card);padding:1.5rem;padding-top:10rem;box-shadow:0 10px 20px -10px rgba(0,0,0,0.6);display:flex;flex-direction:column}
+.roadmap-item{position:relative;width:100%;background:var(--surface);border:1px solid var(--border-2);border-radius:var(--r-card);padding:1.75rem;padding-top:10rem;padding-bottom:2rem;box-shadow:0 10px 20px -10px rgba(0,0,0,0.6);display:flex;flex-direction:column}
 .roadmap-item-img{position:absolute;top:-70px;left:50%;transform:translateX(-50%);width:95%;max-width:490px;max-height:240px;object-fit:contain;z-index:15;border-radius:var(--r-card);background:transparent;border:none;box-shadow:none}
 @media (min-width: 768px){
   .roadmap-custom{gap:8rem;padding-top:8rem}
-  .roadmap-item{padding:1.75rem;padding-top:14rem}
+  .roadmap-item{padding:2rem;padding-top:14rem;padding-bottom:2.25rem}
   .roadmap-item-img{top:-110px;width:90%;max-width:750px;max-height:340px}
 }
 @media (max-width: 480px){
   .roadmap-custom{gap:5rem;padding-top:5rem}
-  .roadmap-item{padding-top:9.5rem}
+  .roadmap-item{padding:1.5rem;padding-top:9.5rem;padding-bottom:1.75rem}
   .roadmap-item-img{top:-55px;width:92%;max-width:380px;max-height:210px}
 }
 
-.roadmap-item .roadmap-num{font-size:.7rem;color:var(--accent-2);font-weight:600;letter-spacing:.1em;margin-bottom:.15rem;display:block}
-.roadmap-item h3{font-size:1.1rem;font-weight:800;color:var(--text-hi);margin-bottom:.5rem;margin-top:0;position:relative;z-index:5;line-height:1.3}
+.roadmap-item .roadmap-num{font-size:.7rem;color:var(--accent-2);font-weight:600;letter-spacing:.1em;margin-bottom:.45rem;display:block}
+.roadmap-item h3{font-size:1.1rem;font-weight:800;color:var(--text-hi);margin-bottom:.7rem;margin-top:0;position:relative;z-index:5;line-height:1.35}
 @media (min-width: 768px){.roadmap-item h3{font-size:1.2rem}}
-.roadmap-item p{color:var(--text-lo);font-size:.8125rem;line-height:1.55;margin-bottom:.6rem;position:relative;z-index:5}
-.roadmap-points{list-style:none;display:flex;flex-direction:column;gap:7px;margin-top:0;position:relative;z-index:5}
-.roadmap-points li{display:flex;gap:8px;align-items:flex-start;font-size:.78125rem;color:var(--text);line-height:1.5}
+.roadmap-item p{color:var(--text-lo);font-size:.8125rem;line-height:1.65;margin-bottom:.9rem;position:relative;z-index:5}
+.roadmap-points{list-style:none;display:flex;flex-direction:column;gap:10px;margin-top:0;position:relative;z-index:5}
+.roadmap-points li{display:flex;gap:8px;align-items:flex-start;font-size:.78125rem;color:var(--text);line-height:1.55}
 .roadmap-points i{color:var(--success-bright);font-size:.68rem;margin-top:4px;flex-shrink:0;text-shadow:0 0 8px rgba(44,255,5,.4)}
 
 /* HERO */
@@ -180,17 +180,17 @@ h1,h2,h3,h4{color:var(--text-hi);line-height:1.15;font-weight:600;letter-spacing
 .emotional p:last-child{margin-bottom:0}
 .emotional strong{color:var(--text-hi);font-weight:600}
 
-/* FEATURES — صور شفافة */
+/* FEATURES — صور قريبة من النصوص */
 .features{display:grid;grid-template-columns:1fr;gap:32px}
 @media(min-width:768px){.features{grid-template-columns:1fr 1fr}}
 .feature{position:relative;padding:0;border-radius:var(--r-card);background:transparent;border:none;transition:all .35s var(--ease);overflow:visible}
 .feature:hover{transform:translateY(-4px)}
-.feature-img{width:100%;aspect-ratio:16/10;object-fit:contain;border-radius:var(--r-card);background:transparent;box-shadow:none;margin-bottom:24px;filter:drop-shadow(0 20px 30px rgba(0,0,0,0.45))}
+.feature-img{width:100%;aspect-ratio:16/10;object-fit:contain;border-radius:var(--r-card);background:transparent;box-shadow:none;margin-bottom:14px;filter:drop-shadow(0 20px 30px rgba(0,0,0,0.45))}
 .feature-body{padding:0 10px}
 .feature h3{display:flex;align-items:center;gap:12px;margin-bottom:12px;text-align:right}
 .feature h3 .feature-ico-inline{width:42px;height:42px;flex-shrink:0;border-radius:12px;background:linear-gradient(140deg,rgba(59,130,246,.2),rgba(34,211,238,.08));border:1px solid rgba(59,130,246,.3);display:grid;place-items:center;color:var(--accent-2);font-size:1rem;box-shadow:0 6px 16px -8px rgba(59,130,246,.6)}
 @media(max-width:480px){.feature h3 .feature-ico-inline{width:38px;height:38px;font-size:.95rem;border-radius:10px}}
-.feature > .feature-body > p{color:var(--text-lo);margin-bottom:20px;font-size:1.05rem}
+.feature > .feature-body > p{color:var(--text-lo);margin-bottom:16px;font-size:1.05rem;line-height:1.7}
 .feature-list{list-style:none;display:flex;flex-direction:column;gap:12px}
 .feature-list li{display:flex;gap:12px;align-items:flex-start;font-size:1rem;color:var(--text)}
 .feature-list i{color:var(--success-bright);font-size:.85rem;margin-top:6px;flex-shrink:0;text-shadow:0 0 8px rgba(44,255,5,.4)}
@@ -326,8 +326,9 @@ footer p{color:var(--text-mute);font-size:.875rem}
 .wa-float::after{content:'تواصل معنا';position:absolute;top:50%;right:calc(100% + 14px);transform:translateY(-50%) translateX(8px);background:rgba(8,12,24,.96);color:#fff;font-size:.8125rem;font-weight:600;padding:8px 14px;border-radius:10px;white-space:nowrap;border:1px solid var(--border-2);box-shadow:0 8px 24px -8px rgba(0,0,0,.9);opacity:0;pointer-events:none;transition:opacity .3s ease, transform .3s ease}
 .wa-float.show:hover::after{opacity:1;transform:translateY(-50%) translateX(0)}
 
-/* ✨ WhatsApp Attention Animation — عند إلغاء الدفع */
+/* ✨ WhatsApp Attention — الأيقونة + النص */
 .wa-float.attention{animation:waAttention 1s ease-in-out 3}
+.wa-float.attention i{animation:waIconShake .5s ease-in-out 6}
 .wa-float.attention::after{
   content:'لم تكمل الدفع؟ تواصل معنا';
   opacity:1;
@@ -340,11 +341,16 @@ footer p{color:var(--text-mute);font-size:.875rem}
 }
 @keyframes waAttention{
   0%,100%{transform:scale(1) translateY(0) rotate(0);box-shadow:0 10px 25px -6px rgba(0,0,0,.55),0 4px 12px -3px rgba(37,211,102,.35),0 0 0 0 rgba(37,211,102,.7)}
-  15%{transform:scale(1.18) translateY(-6px) rotate(-10deg);box-shadow:0 15px 30px -6px rgba(0,0,0,.6),0 6px 18px -3px rgba(37,211,102,.5),0 0 0 14px rgba(37,211,102,.25)}
-  30%{transform:scale(1.12) translateY(-4px) rotate(10deg)}
-  45%{transform:scale(1.15) translateY(-5px) rotate(-8deg);box-shadow:0 15px 30px -6px rgba(0,0,0,.6),0 6px 18px -3px rgba(37,211,102,.5),0 0 0 10px rgba(37,211,102,.2)}
-  60%{transform:scale(1.08) translateY(-3px) rotate(6deg)}
-  75%{transform:scale(1.05) translateY(-2px) rotate(-3deg)}
+  15%{transform:scale(1.2) translateY(-8px) rotate(-12deg);box-shadow:0 15px 30px -6px rgba(0,0,0,.6),0 6px 18px -3px rgba(37,211,102,.5),0 0 0 15px rgba(37,211,102,.3)}
+  30%{transform:scale(1.15) translateY(-5px) rotate(12deg);box-shadow:0 15px 30px -6px rgba(0,0,0,.6),0 6px 18px -3px rgba(37,211,102,.5),0 0 0 22px rgba(37,211,102,.15)}
+  45%{transform:scale(1.18) translateY(-7px) rotate(-10deg);box-shadow:0 15px 30px -6px rgba(0,0,0,.6),0 6px 18px -3px rgba(37,211,102,.5),0 0 0 28px rgba(37,211,102,.05)}
+  60%{transform:scale(1.1) translateY(-4px) rotate(8deg)}
+  75%{transform:scale(1.05) translateY(-2px) rotate(-4deg)}
+}
+@keyframes waIconShake{
+  0%,100%{transform:scale(1) rotate(0)}
+  25%{transform:scale(1.2) rotate(-14deg)}
+  75%{transform:scale(1.2) rotate(14deg)}
 }
 
 @media(max-width:640px){
@@ -632,15 +638,15 @@ footer p{color:var(--text-mute);font-size:.875rem}
       <div class="gift rv"><div class="gift-ico"><i class="fa-solid fa-rocket"></i></div><h3>خطة الإطلاق السريع</h3><p>منتجات رقمية جاهزة للبيع فورًا، مع خطة واضحة تطلق بها مشروعك في يوم واحد.</p></div>
       <div class="gift rv"><div class="gift-ico"><i class="fa-solid fa-diagram-project"></i></div><h3>مهارة واحدة — مصادر دخل متعددة</h3><p>لن تتعلم فقط كيف تبيع المنتجات الرقمية — بل ستتعلم مهارات متعددة تبني بها مصادر دخل متنوعة.</p></div>
       <div class="gift rv"><div class="gift-ico"><i class="fa-solid fa-headset"></i></div><h3>دعم على طول الطريق</h3><p>فريق من الخبراء يتابعك من أول خطوة حتى سحب أرباحك. دعم حقيقي من إنسان حقيقي.</p></div>
-      <div class="gift rv"><div class="gift-ico"><i class="fa-solid fa-lightbulb"></i></div><h3>50 فكرة منتجات رقميةprice</h3><p>50 فكرة منتجات رقمية ناجحة، وعليها طلب في-val مجالات مربحة.</p></div>
-      <div class="gift rv"><div class="gift-">ico"><i class="fa-solid fa-book-open"></i></div><h3>كتاب هندسة الذات</h3(><p>كتاب في تطوير الذات، يساعدك على التطور في كل جوانب الحياة.</p></div>
+      <div class="gift rv"><div class="gift-ico"><i class="fa-solid fa-lightbulb"></i></div><h3>50 فكرة منتجات رقمية</h3><p>50 فكرة منتجات رقمية ناجحة، وعليها طلب في مجالات مربحة.</p></div>
+      <div class="gift rv"><div class="gift-ico"><i class="fa-solid fa-book-open"></i></div><h3>كتاب هندسة الذات</h3><p>كتاب في تطوير الذات، يساعدك على التطور في كل جوانب الحياة.</p></div>
     </div>
-  </بقdiv>
+  </div>
 </section>
 
 <section class="sec" style="padding-top:0">
   <div class="container">
-    <div class="sec-head rيمةv">
+    <div class="sec-head rv">
       <div class="eyebrow"><span class="eyebrow-dot"></span> قصتي</div>
       <h2 class="t-h1">لماذا أنشأت ريبل ستارت؟</h2>
     </div>
@@ -677,7 +683,7 @@ footer p{color:var(--text-mute);font-size:.875rem}
         </div>
         <ul class="pricing-list">
           <li><i class="fa-solid fa-check"></i><span>بناء عقلية النجاح <span class="price-val">(بقيمة 15$)</span></span></li>
-          <li><i class="fa-solid fa-check"></i><span>استراتيجيات نمو الحسابات <span class=" 30$)</span></span></li>
+          <li><i class="fa-solid fa-check"></i><span>استراتيجيات نمو الحسابات <span class="price-val">(بقيمة 30$)</span></span></li>
           <li><i class="fa-solid fa-check"></i><span>إنشاء منتجات رقمية <span class="price-val">(بقيمة 30$)</span></span></li>
           <li><i class="fa-solid fa-check"></i><span>إنشاء متجر وصفحات هبوط <span class="price-val">(بقيمة 40$)</span></span></li>
           <li><i class="fa-solid fa-check"></i><span>مونتاج الفيديوهات <span class="price-val">(بقيمة 25$)</span></span></li>
@@ -785,7 +791,7 @@ footer p{color:var(--text-mute);font-size:.875rem}
     </div>
     <div class="contact rv">
       <p>إذا كان لديك أي سؤال إضافي — تواصل معنا على الواتساب</p>
-      <a class="btn btn-wa btn-lg" href="https://wa.me/967733422360?text=السلام عليكم، عندي سؤال بخصوص كورس ريبل ستارت" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> تواصل معنا على واتساب</a>
+      <a class="btn btn-wa btn-lg" href="https://wa.me/963934398471?text=السلام عليكم، عندي سؤال بخصوص كورس ريبل ستارت" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> تواصل معنا على واتساب</a>
     </div>
   </div>
 </section>
@@ -811,7 +817,7 @@ footer p{color:var(--text-mute);font-size:.875rem}
   <div class="container"><p>© 2026 ريبل ستارت — جميع الحقوق محفوظة</p></div>
 </footer>
 
-<a class="wa-float" id="waFloat" href="https://wa.me/967733422360" target="_blank" rel="noopener" aria-label="تواصل معنا على واتساب">
+<a class="wa-float" id="waFloat" href="https://wa.me/963934398471" target="_blank" rel="noopener" aria-label="تواصل معنا على واتساب">
   <i class="fa-brands fa-whatsapp"></i>
 </a>
 
@@ -847,15 +853,16 @@ footer p{color:var(--text-mute);font-size:.875rem}
   }
 
   /* ✨ حركة الواتساب عند إلغاء الدفع */
+  let waAttentionTimer = null;
   function triggerWhatsAppAttention(){
     const wa = document.getElementById('waFloat');
     if(!wa) return;
     wa.classList.add('show');
     wa.classList.remove('attention');
-    void wa.offsetWidth; // restart animation
+    void wa.offsetWidth;
     wa.classList.add('attention');
-    clearTimeout(triggerWhatsAppAttention._t);
-    triggerWhatsAppAttention._t = setTimeout(function(){
+    clearTimeout(waAttentionTimer);
+    waAttentionTimer = setTimeout(function(){
       wa.classList.remove('attention');
     }, 4500);
   }
